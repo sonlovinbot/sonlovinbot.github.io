@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đặng Hữu Sơn — Ứng dụng & dự án AI miễn phí</title>
+<meta name="description" content="Phần mềm, game 3D và tài liệu thực hành AI miễn phí của Đặng Hữu Sơn — CEO & Co-Founder LovinBot AI. AI Audio Studio, Làng Vui Học, Vibe Code 3D…">
+<meta property="og:title" content="Đặng Hữu Sơn — Ứng dụng & dự án AI miễn phí">
+<meta property="og:description" content="Phần mềm, game 3D và tài liệu thực hành AI miễn phí.">
+<meta property="og:image" content="https://app.danghuuson.com/assets/projects/vieneu-audio-studio.jpg">
+<meta property="og:url" content="https://app.danghuuson.com/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F7F8; --surface: #FFFFFF; --border: #E6E7EA; --text: #1F2937; --muted: #5B6472;
+  --brand: #F67D1C; --ink: #C2410C; --soft: #FFF3E8; --chip: #EEF0F3;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0F1115; --surface: #171A20; --border: #2A2F38; --text: #E8EAED; --muted: #A3AAB5;
+          --ink: #FB923C; --soft: #2A2017; --chip: #232831; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 "Be Vietnam Pro", system-ui, sans-serif; color: var(--text); background: var(--bg); }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 0; flex-wrap: wrap; }
+.me { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.avatar { width: 42px; height: 42px; border-radius: 12px; background: var(--brand); color: #111827; display: grid; place-items: center; font-weight: 800; font-size: 15px; }
+.me b { display: block; font-size: 16px; }
+.me small { color: var(--muted); font-size: 13px; }
+.top nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 16px; border-radius: 10px; text-decoration: none;
+       font-weight: 700; font-size: 14px; border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.btn.primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+.btn:hover { border-color: var(--muted); }
+.hero { padding: 36px 0 12px; }
+.hero h1 { font-size: clamp(30px, 5vw, 50px); line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.02em; }
+.hero h1 em { font-style: normal; color: var(--ink); }
+.hero p { color: var(--muted); max-width: 720px; margin: 0 0 20px; font-size: 17px; }
+.stats { display: flex; gap: 8px; flex-wrap: wrap; }
+.stat { font-size: 13px; padding: 4px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+.stat b { color: var(--text); }
+h2 { font-size: 24px; margin: 56px 0 6px; letter-spacing: -0.01em; scroll-margin-top: 16px; }
+.lead { color: var(--muted); margin: 0 0 18px; }
+.featured { display: grid; grid-template-columns: 1.25fr 1fr; gap: 0; overflow: hidden; border-radius: 18px;
+            border: 1px solid var(--border); background: var(--surface); margin-top: 28px; }
+.featured img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 260px; }
+.featured .body { padding: 26px; display: flex; flex-direction: column; gap: 12px; }
+.featured h3 { margin: 0; font-size: 26px; }
+.featured p { margin: 0; color: var(--muted); }
+.kicker { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: var(--chip); color: var(--muted); }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+@media (max-width: 760px) { .featured { grid-template-columns: 1fr; } .featured img { min-height: 0; aspect-ratio: 16/9; } }
+.filters { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 4px 0 18px; }
+.chip { flex: none; font: 700 14px "Be Vietnam Pro", sans-serif; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+        border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+.chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--surface);
+        transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(16, 24, 40, .08); }
+.card[hidden] { display: none; }
+.thumb { display: block; aspect-ratio: 16 / 9; background: var(--soft); overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.card:hover .thumb img { transform: scale(1.03); }
+.thumb.empty { display: grid; place-items: center; font-size: 46px; background: linear-gradient(135deg, var(--soft), var(--chip)); }
+.card .body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card h3 { margin: 0; font-size: 18px; line-height: 1.3; }
+.card h3 a { text-decoration: none; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+.card .actions .btn { min-height: 36px; padding: 0 12px; font-size: 13px; }
+.about { margin-top: 56px; padding: 22px; border-radius: 16px; background: var(--soft); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.about p { margin: 0; max-width: 680px; }
+footer { margin: 40px 0 32px; color: var(--muted); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="me" href="/"><span class="avatar" aria-hidden="true">ĐHS</span><span><b>Đặng Hữu Sơn</b><small>CEO &amp; Co-Founder LovinBot AI</small></span></a>
+    <nav>
+      <a class="btn" href="#du-an">Dự án</a>
+      <a class="btn" href="https://github.com/sonlovinbot" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn primary" href="https://www.facebook.com/danghuuson.182/" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Phần mềm &amp; dự án AI<br><em>miễn phí, dùng được ngay</em></h1>
+    <p>Những công cụ, game 3D và tài liệu thực hành mình làm bằng AI — mở trên trình duyệt hoặc cài lên máy, không cần tài khoản. Mã nguồn công khai trên GitHub.</p>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <div id="featured"></div>
+
+  <h2 id="du-an">Tất cả dự án</h2>
+  <p class="lead">Bấm vào thẻ để mở. Mỗi dự án có mã nguồn trên GitHub.</p>
+  <div class="filters" id="filters" role="group" aria-label="Lọc dự án"></div>
+  <div class="grid" id="grid"><noscript><p>Bật JavaScript để xem danh sách, hoặc xem <a href="https://github.com/sonlovinbot?tab=repositories">các repo trên GitHub</a>.</p></noscript></div>
+
+  <section class="about">
+    <p><b>Muốn làm phần mềm miễn phí của riêng bạn?</b> Mình chia sẻ cả quy trình phát hành — kiểm bảo mật, bộ cài, trang giới thiệu, báo bản mới — thành bộ skill cho Claude Code.</p>
+    <a class="btn primary" href="https://github.com/sonlovinbot/free-app-sponsor-kit" target="_blank" rel="noopener">Xem Free App Kit →</a>
+  </section>
+
+  <footer>
+    <span>© 2026 <a href="https://www.facebook.com/danghuuson.182/" target="_blank" rel="noopener">Đặng Hữu Sơn</a> · CEO &amp; Co-Founder LovinBot AI</span>
+    <span>Đồng hành: <a href="https://academy.coachio.ai/?utm_source=app_hub&amp;utm_medium=website&amp;utm_campaign=footer" target="_blank" rel="noopener">Coachio Academy</a></span>
+  </footer>
+</div>
+<script>
+// Danh sách dự án đọc từ projects.json — thêm dự án mới chỉ cần sửa file đó.
+(async function () {
+  const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt) e.textContent = txt; return e; };
+  const isExt = (u) => /^https?:\/\//.test(u);
+  const a = (href, cls, txt) => { const x = el("a", cls, txt); x.href = href; if (isExt(href)) { x.target = "_blank"; x.rel = "noopener"; } return x; };
+  let data;
+  try { data = await (await fetch("projects.json", { cache: "no-store" })).json(); } catch { return; }
+  const P = data.projects || [], C = data.categories || {};
+  const stats = document.getElementById("stats");
+  const counts = {}; P.forEach((p) => (counts[p.category] = (counts[p.category] || 0) + 1));
+  const s0 = el("span", "stat"); s0.append(el("b", "", String(P.length)), document.createTextNode(" dự án")); stats.append(s0);
+  Object.keys(C).forEach((k) => { if (counts[k]) { const s = el("span", "stat"); s.append(el("b", "", String(counts[k])), document.createTextNode(" · " + C[k])); stats.append(s); } });
+
+  const f = P.find((p) => p.featured);
+  if (f) {
+    const box = el("article", "featured");
+    const imgLink = a(f.url, "", ""); const img = el("img"); img.src = f.image; img.alt = f.title; imgLink.append(img); box.append(imgLink);
+    const b = el("div", "body");
+    b.append(el("span", "kicker", "Nổi bật · " + (C[f.category] || "")), el("h3", "", f.title), el("p", "", f.desc));
+    const tg = el("div", "tags"); (f.tags || []).forEach((t) => tg.append(el("span", "tag", t))); b.append(tg);
+    const ac = el("div", "actions");
+    if (f.download) ac.append(a(f.download, "btn primary", "⬇ Tải miễn phí"));
+    ac.append(a(f.url, "btn", "Xem giới thiệu"));
+    if (f.repo) ac.append(a(f.repo, "btn", "Mã nguồn"));
+    b.append(ac); box.append(b);
+    document.getElementById("featured").append(box);
+  }
+
+  const grid = document.getElementById("grid");
+  P.forEach((p) => {
+    const card = el("article", "card"); card.dataset.cat = p.category;
+    const th = a(p.url, "thumb" + (p.image ? "" : " empty"), p.image ? "" : "🧰");
+    if (p.image) { const i = el("img"); i.src = p.image; i.alt = p.title; i.loading = "lazy"; th.append(i); }
+    card.append(th);
+    const b = el("div", "body");
+    const tg = el("div", "tags"); tg.append(el("span", "tag", C[p.category] || p.category)); (p.tags || []).slice(0, 2).forEach((t) => tg.append(el("span", "tag", t)));
+    const h = el("h3"); h.append(a(p.url, "", p.title));
+    b.append(tg, h, el("p", "", p.desc));
+    const ac = el("div", "actions"); ac.append(a(p.url, "btn primary", isExt(p.url) ? "Mở trên GitHub ↗" : "Mở →"));
+    if (p.repo && p.repo !== p.url) ac.append(a(p.repo, "btn", "Mã nguồn"));
+    b.append(ac); card.append(b); grid.append(card);
+  });
+
+  const fl = document.getElementById("filters");
+  const mk = (key, label) => { const c = el("button", "chip", label); c.type = "button"; c.dataset.f = key; c.setAttribute("aria-pressed", key === "" ? "true" : "false"); fl.append(c); };
+  mk("", "Tất cả"); Object.keys(C).forEach((k) => counts[k] && mk(k, C[k]));
+  fl.addEventListener("click", (e) => {
+    const c = e.target.closest(".chip"); if (!c) return;
+    fl.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", x === c));
+    grid.querySelectorAll(".card").forEach((k) => (k.hidden = !!c.dataset.f && k.dataset.cat !== c.dataset.f));
+  });
+})();
+</script>
+</body>
+</html>
