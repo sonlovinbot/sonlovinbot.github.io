@@ -24,7 +24,8 @@ Repo đặc biệt `sonlovinbot.github.io` (GitHub Pages của tài khoản). V�
 
 ## Meta Pixel
 `index.html` và `404.html` có Meta Pixel `1152715006830829`: PageView mỗi lần xem trang, `ViewContent` khi mở một dự án,
-`DownloadClick` (sự kiện tuỳ chỉnh) khi bấm "Tải miễn phí" — kèm `content_ids` = id dự án. Xem trong Meta Events Manager.
+`DownloadClick` (sự kiện tuỳ chỉnh) khi bấm "Tải miễn phí" — kèm `content_ids` = id dự án; `PromoClick` khi bấm khối ưu đãi khoá học.
+Trang AI Audio Studio có `DownloadClick` riêng (tải zip / sao chép lệnh cài) — custom conversion nên lọc theo URL trang đó. Xem trong Meta Events Manager.
 
 ## Dự án ở tổ chức sonlovinbot-team (repo riêng tư)
 Dự án muốn giữ kín mã nguồn nằm ở tổ chức `sonlovinbot-team` (GitHub Team) → trang tại
