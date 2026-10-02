@@ -26,6 +26,12 @@ Repo đặc biệt `sonlovinbot.github.io` (GitHub Pages của tài khoản). V�
 `index.html` và `404.html` có Meta Pixel `1152715006830829`: PageView mỗi lần xem trang, `ViewContent` khi mở một dự án,
 `DownloadClick` (sự kiện tuỳ chỉnh) khi bấm "Tải miễn phí" — kèm `content_ids` = id dự án. Xem trong Meta Events Manager.
 
+## Dự án ở tổ chức sonlovinbot-team (repo riêng tư)
+Dự án muốn giữ kín mã nguồn nằm ở tổ chức `sonlovinbot-team` (GitHub Team) → trang tại
+`https://studio.danghuuson.com/<tên-repo>/`. Trong `projects.json` ghi `url` đầy đủ đường dẫn studio.
+Khi chuyển một repo sang tổ chức: thêm tên repo vào thư mục chuyển hướng (`<tên-repo>/index.html`) và mảng `moved` trong `404.html`
+để link cũ `app.danghuuson.com/<tên-repo>/…` tự chuyển sang studio.
+
 ## Lưu ý
 - **Không đổi tên repo đã có người dùng** — đường dẫn `app.danghuuson.com/<tên-repo>` đổi theo và link cũ không tự chuyển.
 - DNS: bản ghi `CNAME app → sonlovinbot.github.io` tại nhà cung cấp tên miền. Tên miền gốc `danghuuson.com` đã xác minh trong GitHub → Settings → Pages.
