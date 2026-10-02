@@ -12,13 +12,19 @@ Repo đặc biệt `sonlovinbot.github.io` (GitHub Pages của tài khoản). V�
 
 ```json
 { "id": "ten-repo", "title": "Tên hiển thị", "desc": "1–2 câu: làm được gì, cho ai.",
-  "category": "app | game | guide | devkit", "url": "/ten-repo/", "repo": "https://github.com/sonlovinbot/ten-repo",
+  "category": "app | game | guide | devkit", "url": "/ten-repo/",
   "image": "assets/projects/ten-repo.jpg", "tags": ["…", "…"], "featured": false }
 ```
 
 3. Ảnh thẻ: 640×360 JPG trong `assets/projects/`. Commit → khoảng 1 phút sau trang cập nhật.
 
-`featured: true` cho đúng **một** dự án để hiện thẻ lớn đầu trang.
+`featured: true` cho đúng **một** dự án để hiện thẻ lớn đầu trang. `cta` (tuỳ chọn) đổi chữ trên nút mở.
+
+**Không ghi link mã nguồn (repo) vào đây** — trang chỉ hiện link sử dụng. File này công khai, ai cũng đọc được.
+
+## Meta Pixel
+`index.html` và `404.html` có Meta Pixel `1152715006830829`: PageView mỗi lần xem trang, `ViewContent` khi mở một dự án,
+`DownloadClick` (sự kiện tuỳ chỉnh) khi bấm "Tải miễn phí" — kèm `content_ids` = id dự án. Xem trong Meta Events Manager.
 
 ## Lưu ý
 - **Không đổi tên repo đã có người dùng** — đường dẫn `app.danghuuson.com/<tên-repo>` đổi theo và link cũ không tự chuyển.

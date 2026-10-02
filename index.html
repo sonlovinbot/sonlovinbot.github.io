@@ -77,7 +77,25 @@ h2 { font-size: 24px; margin: 56px 0 6px; letter-spacing: -0.01em; scroll-margin
 .about p { margin: 0; max-width: 680px; }
 footer { margin: 40px 0 32px; color: var(--muted); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
 footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
+footer .privacy { flex-basis: 100%; font-size: 12px; }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1152715006830829');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1152715006830829&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <div class="wrap">
@@ -85,23 +103,22 @@ footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
     <a class="me" href="/"><span class="avatar" aria-hidden="true">ĐHS</span><span><b>Đặng Hữu Sơn</b><small>CEO &amp; Co-Founder LovinBot AI</small></span></a>
     <nav>
       <a class="btn" href="#du-an">Dự án</a>
-      <a class="btn" href="https://github.com/sonlovinbot" target="_blank" rel="noopener">GitHub</a>
       <a class="btn primary" href="https://www.facebook.com/danghuuson.182/" target="_blank" rel="noopener">Facebook</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Phần mềm &amp; dự án AI<br><em>miễn phí, dùng được ngay</em></h1>
-    <p>Những công cụ, game 3D và tài liệu thực hành mình làm bằng AI — mở trên trình duyệt hoặc cài lên máy, không cần tài khoản. Mã nguồn công khai trên GitHub.</p>
+    <p>Những công cụ, game 3D và tài liệu thực hành mình làm bằng AI — mở trên trình duyệt hoặc cài lên máy, không cần tài khoản.</p>
     <div class="stats" id="stats"></div>
   </section>
 
   <div id="featured"></div>
 
   <h2 id="du-an">Tất cả dự án</h2>
-  <p class="lead">Bấm vào thẻ để mở. Mỗi dự án có mã nguồn trên GitHub.</p>
+  <p class="lead">Bấm vào thẻ để mở và dùng ngay.</p>
   <div class="filters" id="filters" role="group" aria-label="Lọc dự án"></div>
-  <div class="grid" id="grid"><noscript><p>Bật JavaScript để xem danh sách, hoặc xem <a href="https://github.com/sonlovinbot?tab=repositories">các repo trên GitHub</a>.</p></noscript></div>
+  <div class="grid" id="grid"><noscript><p>Bật JavaScript để xem danh sách dự án.</p></noscript></div>
 
   <section class="about">
     <p><b>Muốn làm phần mềm miễn phí của riêng bạn?</b> Mình chia sẻ cả quy trình phát hành — kiểm bảo mật, bộ cài, trang giới thiệu, báo bản mới — thành bộ skill cho Claude Code.</p>
@@ -111,6 +128,7 @@ footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
   <footer>
     <span>© 2026 <a href="https://www.facebook.com/danghuuson.182/" target="_blank" rel="noopener">Đặng Hữu Sơn</a> · CEO &amp; Co-Founder LovinBot AI</span>
     <span>Đồng hành: <a href="https://academy.coachio.ai/?utm_source=app_hub&amp;utm_medium=website&amp;utm_campaign=footer" target="_blank" rel="noopener">Coachio Academy</a></span>
+    <span class="privacy">Trang dùng Meta Pixel (cookie của Facebook) để đo lượt xem và hiệu quả quảng cáo. Phần mềm tải về không chứa mã theo dõi này.</span>
   </footer>
 </div>
 <script>
@@ -130,14 +148,13 @@ footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
   const f = P.find((p) => p.featured);
   if (f) {
     const box = el("article", "featured");
-    const imgLink = a(f.url, "", ""); const img = el("img"); img.src = f.image; img.alt = f.title; imgLink.append(img); box.append(imgLink);
+    const imgLink = a(f.url, "", ""); imgLink.dataset.pid = f.id; const img = el("img"); img.src = f.image; img.alt = f.title; imgLink.append(img); box.append(imgLink);
     const b = el("div", "body");
     b.append(el("span", "kicker", "Nổi bật · " + (C[f.category] || "")), el("h3", "", f.title), el("p", "", f.desc));
     const tg = el("div", "tags"); (f.tags || []).forEach((t) => tg.append(el("span", "tag", t))); b.append(tg);
     const ac = el("div", "actions");
-    if (f.download) ac.append(a(f.download, "btn primary", "⬇ Tải miễn phí"));
-    ac.append(a(f.url, "btn", "Xem giới thiệu"));
-    if (f.repo) ac.append(a(f.repo, "btn", "Mã nguồn"));
+    if (f.download) { const d = a(f.download, "btn primary", "⬇ Tải miễn phí"); d.dataset.pid = f.id; d.dataset.act = "download"; ac.append(d); }
+    const v = a(f.url, "btn", "Xem giới thiệu"); v.dataset.pid = f.id; ac.append(v);
     b.append(ac); box.append(b);
     document.getElementById("featured").append(box);
   }
@@ -145,16 +162,26 @@ footer a { color: var(--ink); font-weight: 700; text-decoration: none; }
   const grid = document.getElementById("grid");
   P.forEach((p) => {
     const card = el("article", "card"); card.dataset.cat = p.category;
-    const th = a(p.url, "thumb" + (p.image ? "" : " empty"), p.image ? "" : "🧰");
+    const th = a(p.url, "thumb" + (p.image ? "" : " empty"), p.image ? "" : "🧰"); th.dataset.pid = p.id;
     if (p.image) { const i = el("img"); i.src = p.image; i.alt = p.title; i.loading = "lazy"; th.append(i); }
     card.append(th);
     const b = el("div", "body");
     const tg = el("div", "tags"); tg.append(el("span", "tag", C[p.category] || p.category)); (p.tags || []).slice(0, 2).forEach((t) => tg.append(el("span", "tag", t)));
-    const h = el("h3"); h.append(a(p.url, "", p.title));
+    const h = el("h3"); const ht = a(p.url, "", p.title); ht.dataset.pid = p.id; h.append(ht);
     b.append(tg, h, el("p", "", p.desc));
-    const ac = el("div", "actions"); ac.append(a(p.url, "btn primary", isExt(p.url) ? "Mở trên GitHub ↗" : "Mở →"));
-    if (p.repo && p.repo !== p.url) ac.append(a(p.repo, "btn", "Mã nguồn"));
+    const ac = el("div", "actions"); const op = a(p.url, "btn primary", p.cta || (isExt(p.url) ? "Mở ↗" : "Mở →")); op.dataset.pid = p.id; ac.append(op);
     b.append(ac); card.append(b); grid.append(card);
+  });
+
+  // Meta Pixel: ghi nhận dự án được mở / tải (bị trình chặn quảng cáo chặn thì bỏ qua).
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[data-pid]");
+    if (!link || typeof window.fbq !== "function") return;
+    const p = P.find((x) => x.id === link.dataset.pid);
+    if (!p) return;
+    const info = { content_ids: [p.id], content_name: p.title, content_category: C[p.category] || p.category, content_type: "product" };
+    if (link.dataset.act === "download") window.fbq("trackCustom", "DownloadClick", info);
+    else window.fbq("track", "ViewContent", info);
   });
 
   const fl = document.getElementById("filters");

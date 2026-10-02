@@ -2,8 +2,7 @@
   "owner": {
     "name": "Đặng Hữu Sơn",
     "title": "CEO & Co-Founder LovinBot AI",
-    "facebook": "https://www.facebook.com/danghuuson.182/",
-    "github": "https://github.com/sonlovinbot"
+    "facebook": "https://www.facebook.com/danghuuson.182/"
   },
   "categories": {
     "app": "Phần mềm",
@@ -18,10 +17,14 @@
       "desc": "Giọng nói AI tiếng Việt chạy ngay trên máy tính: sinh giọng tự nhiên, clone giọng từ 3–5 giây, hội thoại nhiều nhân vật, xuất API. Miễn phí, chạy offline.",
       "category": "app",
       "url": "/vieneu-audio-studio/",
-      "repo": "https://github.com/sonlovinbot/vieneu-audio-studio",
       "download": "/vieneu-audio-studio/#tai-ve",
       "image": "assets/projects/vieneu-audio-studio.jpg",
-      "tags": ["macOS", "Windows", "Linux", "25 giọng"],
+      "tags": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "25 giọng"
+      ],
       "featured": true
     },
     {
@@ -30,9 +33,11 @@
       "desc": "Game giáo dục 3D cho học sinh tiểu học: Toán, Tiếng Anh, Địa lý — chơi ngay trên trình duyệt.",
       "category": "game",
       "url": "/game-3d-lang-vui-hoc/",
-      "repo": "https://github.com/sonlovinbot/game-3d-lang-vui-hoc",
       "image": "assets/projects/game-3d-lang-vui-hoc.jpg",
-      "tags": ["Giáo dục", "Trình duyệt"]
+      "tags": [
+        "Giáo dục",
+        "Trình duyệt"
+      ]
     },
     {
       "id": "game-3d-mira-universe",
@@ -40,9 +45,11 @@
       "desc": "Màn chơi 3D trên web: Mira nhặt Linh Tinh, đánh 5 đợt yêu quái và trùm Hắc Nguyệt Thú.",
       "category": "game",
       "url": "/game-3d-mira-universe/",
-      "repo": "https://github.com/sonlovinbot/game-3d-mira-universe",
       "image": "assets/projects/game-3d-mira-universe.jpg",
-      "tags": ["Hành động", "three.js"]
+      "tags": [
+        "Hành động",
+        "three.js"
+      ]
     },
     {
       "id": "model-3d-vinfast-wild-lessons",
@@ -50,9 +57,11 @@
       "desc": "Quy trình đưa xe bán tải từ 4 ảnh concept, Tripo, tách bánh bằng code đến xe chạy được trong three.js.",
       "category": "game",
       "url": "/model-3d-vinfast-wild-lessons/",
-      "repo": "https://github.com/sonlovinbot/model-3d-vinfast-wild-lessons",
       "image": "assets/projects/model-3d-vinfast-wild-lessons.jpg",
-      "tags": ["3D model", "three.js"]
+      "tags": [
+        "3D model",
+        "three.js"
+      ]
     },
     {
       "id": "ebook-vibe-code-the-gioi-3D",
@@ -60,39 +69,11 @@
       "desc": "Cẩm nang thực hành: từ ý tưởng đến Web, App, Game & Animation 3D bằng AI — bản đọc thử miễn phí.",
       "category": "guide",
       "url": "/ebook-vibe-code-the-gioi-3D/",
-      "repo": "https://github.com/sonlovinbot/ebook-vibe-code-the-gioi-3D",
       "image": "assets/projects/ebook-vibe-code-the-gioi-3D.jpg",
-      "tags": ["Ebook", "Đọc thử"]
-    },
-    {
-      "id": "remotion-50nam-hcmc-geomaps-guide",
-      "title": "TP.HCM 50 năm × Codex × Remotion",
-      "desc": "Quy trình thực hành dựng video TP.HCM 50 năm bằng Codex, Remotion và Geo Maps.",
-      "category": "guide",
-      "url": "/remotion-50nam-hcmc-geomaps-guide/",
-      "repo": "https://github.com/sonlovinbot/remotion-50nam-hcmc-geomaps-guide",
-      "image": "assets/projects/remotion-50nam-hcmc-geomaps-guide.jpg",
-      "tags": ["Video", "Remotion"]
-    },
-    {
-      "id": "remotion-netflix-reel-project",
-      "title": "Tạo Netflix Reel từ đầu",
-      "desc": "Tài liệu thực hành dựng video dọc phong cách Netflix: chuẩn bị asset, viết prompt và dựng bằng Remotion.",
-      "category": "guide",
-      "url": "/remotion-netflix-reel-project/",
-      "repo": "https://github.com/sonlovinbot/remotion-netflix-reel-project",
-      "image": "assets/projects/remotion-netflix-reel-project.jpg",
-      "tags": ["Video dọc", "Remotion"]
-    },
-    {
-      "id": "video-course-player",
-      "title": "Video Course Player",
-      "desc": "Dựng “dashboard xem video” có chương và phụ đề — bằng cách ra lệnh tiếng Việt cho AI.",
-      "category": "guide",
-      "url": "/video-course-player/",
-      "repo": "https://github.com/sonlovinbot/video-course-player",
-      "image": "assets/projects/video-course-player.jpg",
-      "tags": ["Khoá học", "Player"]
+      "tags": [
+        "Ebook",
+        "Đọc thử"
+      ]
     },
     {
       "id": "free-app-sponsor-kit",
@@ -100,9 +81,12 @@
       "desc": "Bộ skill Claude Code để phát hành phần mềm miễn phí: kiểm bảo mật, bộ cài, trang giới thiệu, góc tài trợ, báo bản mới.",
       "category": "devkit",
       "url": "https://github.com/sonlovinbot/free-app-sponsor-kit",
-      "repo": "https://github.com/sonlovinbot/free-app-sponsor-kit",
       "image": "",
-      "tags": ["Claude Code", "Skill"]
+      "tags": [
+        "Claude Code",
+        "Skill"
+      ],
+      "cta": "Xem & cài đặt ↗"
     }
   ]
 }
