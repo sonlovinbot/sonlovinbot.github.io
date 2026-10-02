@@ -32,7 +32,7 @@
       "title": "Làng Vui Học của Bống & Bin",
       "desc": "Game giáo dục 3D cho học sinh tiểu học: Toán, Tiếng Anh, Địa lý — chơi ngay trên trình duyệt.",
       "category": "game",
-      "url": "https://studio.danghuuson.com/game-3d-lang-vui-hoc/",
+      "url": "https://studio.danghuuson.com/games/#lang-vui-hoc",
       "image": "assets/projects/game-3d-lang-vui-hoc.jpg",
       "tags": [
         "Giáo dục",
@@ -44,11 +44,23 @@
       "title": "Mira · Đêm Linh Quang",
       "desc": "Màn chơi 3D trên web: Mira nhặt Linh Tinh, đánh 5 đợt yêu quái và trùm Hắc Nguyệt Thú.",
       "category": "game",
-      "url": "https://studio.danghuuson.com/game-3d-mira-universe/",
+      "url": "https://studio.danghuuson.com/games/#mira",
       "image": "assets/projects/game-3d-mira-universe.jpg",
       "tags": [
         "Hành động",
         "three.js"
+      ]
+    },
+    {
+      "id": "san-van-dong-vf-trong-dong-3d",
+      "title": "Sân vận động Trống Đồng 3D",
+      "desc": "Dạo quanh mô hình sân vận động 135.000 chỗ ngồi lấy cảm hứng trống đồng Đông Sơn — chọn ghế, mở mái, xem ngày hội bóng đá.",
+      "category": "game",
+      "url": "https://studio.danghuuson.com/games/#san-van-dong",
+      "image": "assets/projects/san-van-dong-vf-trong-dong-3d.jpg",
+      "tags": [
+        "Khám phá 3D",
+        "135.000 ghế"
       ]
     },
     {
