@@ -78,15 +78,14 @@
     {
       "id": "free-app-sponsor-kit",
       "title": "Free App Kit",
-      "desc": "Bộ skill Claude Code để phát hành phần mềm miễn phí: kiểm bảo mật, bộ cài, trang giới thiệu, góc tài trợ, báo bản mới.",
+      "desc": "Bộ skill Claude Code đưa phần mềm vibe code ra công chúng: kiểm bảo mật, bộ cài 1 lệnh, trang giới thiệu, tên miền riêng miễn phí, góc tài trợ, báo bản mới.",
       "category": "devkit",
-      "url": "https://github.com/sonlovinbot/free-app-sponsor-kit",
-      "image": "",
+      "url": "/free-app-sponsor-kit/",
+      "image": "assets/projects/free-app-sponsor-kit.jpg",
       "tags": [
         "Claude Code",
         "Skill"
-      ],
-      "cta": "Xem & cài đặt ↗"
+      ]
     }
   ]
 }
