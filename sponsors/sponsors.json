@@ -1,0 +1,113 @@
+{
+  "_huong_dan": "Sửa file này để đổi quảng cáo. items = danh sách chương trình; pages = trang nào hiện chương trình nào (\"*\" = tất cả; luôn tự xếp gấp nhất trước). Giờ ghi kèm +07:00. Hết hạn vẫn hiện (mờ, xuống cuối), vẫn bấm được. Mục chưa có url thì tự ẩn. Trang 'game' = popup trong game: lấy chương trình còn hạn đầu tiên.",
+  "version": 1,
+  "pages": {
+    "hub": {
+      "source": "app_hub",
+      "title": "Chương trình đang mở",
+      "items": [
+        "*"
+      ]
+    },
+    "vieneu": {
+      "source": "ai_audio_studio_page",
+      "title": "Học thêm cùng Coachio",
+      "layout": "wide",
+      "items": [
+        "workshop-vibe-code-3d",
+        "muse-ai-workshop"
+      ]
+    },
+    "games": {
+      "source": "games_page",
+      "title": "Tự tay làm game 3D",
+      "lead": "Các game ở đây đều làm bằng AI. Workshop chỉ bạn cách giao việc cho ChatGPT/Claude để dựng thế giới 3D của riêng mình.",
+      "layout": "wide",
+      "items": [
+        "workshop-vibe-code-3d"
+      ]
+    },
+    "game": {
+      "items": [
+        "workshop-vibe-code-3d",
+        "antigravity-ebook"
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "workshop-vibe-code-3d",
+      "kind": "workshop",
+      "title": "Workshop Vibe Code 3D × Ebook 3D",
+      "desc": "Hiểu nguyên lý 3D và cách giao việc cho ChatGPT/Claude để dựng web, game, animation 3D. Online, thực hành và hỏi đáp trực tiếp.",
+      "price": "Miễn phí",
+      "price_note": "nhập mã WS_SKILL_FREE",
+      "start": "2026-10-03T19:30:00+07:00",
+      "duration_min": 150,
+      "cta": "Giữ chỗ",
+      "url": "https://academy.coachio.ai/funnels/workshop-vibe-code-3d-game-animation",
+      "campaign": "workshop-vibe-code-3d",
+      "image": "img/workshop-3d.webp",
+      "fit": "contain",
+      "bg": "linear-gradient(160deg,#1b1240,#2d1b69 55%,#0f3b3a)",
+      "accent": "#7C3AED",
+      "short": "Workshop 3D",
+      "cta_popup": "Đăng ký workshop 3D miễn phí",
+      "pitch": "Muốn tự làm game 3D như thế này?"
+    },
+    {
+      "id": "muse-ai-workshop",
+      "kind": "community",
+      "title": "Tạo ảnh, video, audio miễn phí với Muse AI",
+      "desc": "Vào group Zalo học cách làm video, nhận skill Muse và share code 1 tỷ token. Workshop online miễn phí.",
+      "price": "Miễn phí",
+      "price_note": "tặng 1 tỷ token",
+      "start": "2026-10-04T20:00:00+07:00",
+      "duration_min": 120,
+      "cta": "Vào group Zalo",
+      "url": "https://zalo.me/g/kkbpt0na92nyi6bzczzw",
+      "campaign": "muse-ai-workshop",
+      "image": "img/muse-ai.jpg",
+      "fit": "contain",
+      "bg": "#F3F3F3",
+      "accent": "#0068FF",
+      "short": "Muse AI"
+    },
+    {
+      "id": "ai-bootcamp-2026",
+      "kind": "course",
+      "title": "Bootcamp Combo Vibe Code × AI Marketing",
+      "desc": "Khoá Zoom thực chiến 14 ngày: Claude, Antigravity, OpenClaw, n8n — biến AI thành hệ thống làm việc cùng bạn. Không cần biết code.",
+      "price": "Khai giảng 05/10",
+      "deadline": "2026-10-04T23:59:00+07:00",
+      "deadline_label": "Ưu đãi đến",
+      "cta": "Đăng ký",
+      "url": "https://academy.coachio.ai/funnels/ai-marketing-bootcamp-2026",
+      "campaign": "ai-bootcamp-2026",
+      "image": "img/bootcamp-2026.jpg",
+      "fit": "cover",
+      "pos": "0% 50%",
+      "bg": "#0F1B2D",
+      "accent": "#EA580C",
+      "price_note": "3 buổi Zoom · 20h–22h30",
+      "short": "Bootcamp AI"
+    },
+    {
+      "id": "antigravity-ebook",
+      "kind": "elearning",
+      "title": "Vibe Code với Antigravity từ A–Z",
+      "desc": "Bộ video + cẩm nang 126 trang: tự build phần mềm AI bằng cách trò chuyện với AI. Mua một lần, cập nhật trọn đời.",
+      "price": "990.000đ",
+      "price_old": "2.900.000đ",
+      "cta": "Xem khoá học",
+      "url": "https://academy.coachio.ai/funnels/cam-nang-vibe-code-antigravity-a-z",
+      "campaign": "antigravity-ebook",
+      "image": "img/antigravity-ebook.jpg",
+      "fit": "contain",
+      "bg": "#F4F6FB",
+      "accent": "#2563EB",
+      "short": "Khoá Antigravity",
+      "pitch": "Muốn tự làm phần mềm, game bằng AI?"
+    }
+  ]
+}
