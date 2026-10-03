@@ -62,7 +62,7 @@ a.spk-card:hover .spk-media img { transform: scale(1.03); }
 .spk-foot { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 6px; }
 .spk-price { flex: 1 1 96px; display: flex; flex-direction: column; font-size: 13px; color: var(--spk-muted); line-height: 1.35; min-width: 0; }
 .spk-price b { font-size: 15px; color: var(--spk-text); }
-.spk-price s, .spk-price small { font-size: 12px; }
+.spk-price small { font-size: 12px; }
 .spk-cta { flex: none; display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border-radius: 10px;
   background: var(--a); color: #fff; font-size: 14px; font-weight: 700; white-space: nowrap; }
 .no-link .spk-cta { background: transparent; color: var(--spk-muted); border: 1px dashed var(--spk-line); }

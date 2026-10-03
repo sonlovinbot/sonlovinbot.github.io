@@ -1,5 +1,5 @@
 {
-  "_huong_dan": "Sửa file này để đổi quảng cáo. items = danh sách chương trình; pages = trang nào hiện chương trình nào (\"*\" = tất cả; luôn tự xếp gấp nhất trước). Giờ ghi kèm +07:00. Hết hạn vẫn hiện (mờ, xuống cuối), vẫn bấm được. Mục chưa có url thì tự ẩn. Trang 'game' = popup trong game: lấy chương trình còn hạn đầu tiên.",
+  "_huong_dan": "Sửa file này để đổi quảng cáo. items = danh sách chương trình; pages = trang nào hiện chương trình nào (\"*\" = tất cả; luôn tự xếp gấp nhất trước). Giờ ghi kèm +07:00. Hết hạn vẫn hiện (mờ, xuống cuối), vẫn bấm được. Mục chưa có url thì tự ẩn. Trang 'game' = popup trong game: lấy chương trình còn hạn đầu tiên. KHÔNG ghi giá tiền (price chỉ để chữ như \"Miễn phí\", \"Học trọn đời\").",
   "version": 1,
   "pages": {
     "hub": {
@@ -97,8 +97,6 @@
       "kind": "elearning",
       "title": "Vibe Code với Antigravity từ A–Z",
       "desc": "Bộ video + cẩm nang 126 trang: tự build phần mềm AI bằng cách trò chuyện với AI. Mua một lần, cập nhật trọn đời.",
-      "price": "990.000đ",
-      "price_old": "2.900.000đ",
       "cta": "Xem khoá học",
       "url": "https://academy.coachio.ai/funnels/cam-nang-vibe-code-antigravity-a-z",
       "campaign": "antigravity-ebook",
@@ -107,7 +105,9 @@
       "bg": "#F4F6FB",
       "accent": "#2563EB",
       "short": "Khoá Antigravity",
-      "pitch": "Muốn tự làm phần mềm, game bằng AI?"
+      "pitch": "Muốn tự làm phần mềm, game bằng AI?",
+      "price": "Học trọn đời",
+      "price_note": "video + cẩm nang 126 trang"
     }
   ]
 }

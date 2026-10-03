@@ -111,7 +111,6 @@
     var k = KINDS[it.kind] || KINDS.course, href = link(it, cfg.source || page, "sponsor_box", page + "-" + pos);
     var flag = s.tier === "urgent" ? "Gấp" : s.live ? "Live" : "";
     var price = it.price ? '<span class="spk-price"><b>' + esc(it.price) + "</b>" +
-      (it.price_old ? " <s>" + esc(it.price_old) + "</s>" : "") +
       (it.price_note ? "<small>" + esc(it.price_note) + "</small>" : "") + "</span>" : "<span></span>";
     var cta = s.ended ? (it.cta_ended || "Xem lại") : (it.cta || "Xem ngay");
     var tag = href ? "a" : "div";
