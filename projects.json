@@ -97,7 +97,8 @@
       "tags": [
         "Claude Code",
         "Skill"
-      ]
+      ],
+      "hidden": true
     }
   ]
 }

@@ -136,7 +136,7 @@ src="https://www.facebook.com/tr?id=1152715006830829&ev=PageView&noscript=1"
   const a = (href, cls, txt) => { const x = el("a", cls, txt); x.href = href; if (isExt(href)) { x.target = "_blank"; x.rel = "noopener"; } return x; };
   let data;
   try { data = await (await fetch("projects.json", { cache: "no-store" })).json(); } catch { return; }
-  const P = data.projects || [], C = data.categories || {};
+  const P = (data.projects || []).filter((p) => !p.hidden), C = data.categories || {};  // "hidden": true = tạm ẩn
   const stats = document.getElementById("stats");
   const counts = {}; P.forEach((p) => (counts[p.category] = (counts[p.category] || 0) + 1));
   const s0 = el("span", "stat"); s0.append(el("b", "", String(P.length)), document.createTextNode(" dự án")); stats.append(s0);
