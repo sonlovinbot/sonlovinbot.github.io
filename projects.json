@@ -8,7 +8,8 @@
     "app": "Phần mềm",
     "game": "Game & 3D",
     "guide": "Hướng dẫn & sách",
-    "devkit": "Cho người làm phần mềm"
+    "devkit": "Cho người làm phần mềm",
+    "skill": "Skill cho AI"
   },
   "projects": [
     {
@@ -86,6 +87,20 @@
         "Ebook",
         "Đọc thử"
       ]
+    },
+    {
+      "id": "muse-animated-short-film",
+      "title": "Muse Animated Short Film",
+      "desc": "Skill làm phim hoạt hình ngắn trên Muse AI: nhân vật, kịch bản, keyframes, mega prompt, video, thuyết minh, dựng phim. Kèm phim mẫu The Last Lantern.",
+      "category": "skill",
+      "url": "/Muse-animated-short-film/",
+      "image": "assets/projects/muse-animated-short-film.jpg",
+      "tags": [
+        "Skill Muse AI",
+        "Phim hoạt hình",
+        "Mới"
+      ],
+      "cta": "Xem skill →"
     },
     {
       "id": "free-app-sponsor-kit",
