@@ -1,12 +1,15 @@
 {
-  "_huong_dan": "Sửa file này để đổi quảng cáo. items = danh sách chương trình; pages = trang nào hiện chương trình nào (\"*\" = tất cả; luôn tự xếp gấp nhất trước). Giờ ghi kèm +07:00. Hết hạn vẫn hiện (mờ, xuống cuối), vẫn bấm được. Mục chưa có url thì tự ẩn. Trang 'game' = popup trong game: lấy chương trình còn hạn đầu tiên. KHÔNG ghi giá tiền (price chỉ để chữ như \"Miễn phí\", \"Học trọn đời\").",
+  "_huong_dan": "Sửa file này để đổi quảng cáo. items = danh sách chương trình; pages = trang nào hiện chương trình nào (\"*\" = tất cả; luôn tự xếp gấp nhất trước). Giờ ghi kèm +07:00. Hết hạn vẫn hiện (mờ, xuống cuối), vẫn bấm được — trừ mục có \"hide_after_end\": true thì tự ẩn. Mục chưa có url thì tự ẩn. Trang 'game' = popup trong game: lấy chương trình còn hạn đầu tiên. KHÔNG ghi giá tiền (price chỉ để chữ như \"Miễn phí\", \"Học trọn đời\").",
   "version": 1,
   "pages": {
     "hub": {
       "source": "app_hub",
       "title": "Chương trình đang mở",
       "items": [
-        "*"
+        "ai-bootcamp-2026",
+        "workshop-vibe-code-3d",
+        "antigravity-ebook",
+        "muse-ai-workshop"
       ]
     },
     "vieneu": {
@@ -31,6 +34,15 @@
       "items": [
         "workshop-vibe-code-3d",
         "antigravity-ebook"
+      ]
+    },
+    "muse": {
+      "source": "muse_skill_page",
+      "title": "Xem lại workshop Muse AI",
+      "lead": "Bản ghi buổi chia sẻ trên Zoom: cách dùng Muse AI tạo ảnh, video, audio miễn phí và AI Audio Voice. Chỉ mở đến hết hôm nay.",
+      "layout": "wide",
+      "items": [
+        "muse-workshop-record"
       ]
     }
   },
@@ -108,6 +120,26 @@
       "pitch": "Muốn tự làm phần mềm, game bằng AI?",
       "price": "Học trọn đời",
       "price_note": "video + cẩm nang 126 trang"
+    },
+    {
+      "id": "muse-workshop-record",
+      "kind": "record",
+      "title": "Xem lại Workshop Muse AI",
+      "desc": "Record Zoom 4/10: tạo ảnh, video, audio miễn phí với Muse AI và làm giọng đọc bằng AI Audio Voice — xem lại trọn buổi.",
+      "price": "Bản ghi Zoom",
+      "price_note": "Mở đến 23:55 hôm nay",
+      "deadline": "2026-10-05T23:55:00+07:00",
+      "deadline_label": "Xem lại đến",
+      "hide_after_end": true,
+      "cta": "Xem lại ngay",
+      "url": "https://academy.coachio.ai/funnels/record-workshop-muse-ai",
+      "campaign": "muse-workshop-record",
+      "image": "img/muse-record.jpg",
+      "fit": "cover",
+      "pos": "60% 40%",
+      "bg": "#0B0E26",
+      "accent": "#2563EB",
+      "short": "Xem lại Muse AI"
     }
   ]
 }

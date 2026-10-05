@@ -32,7 +32,8 @@
     workshop:  { label: "Workshop online",    icon: '<path d="M2 4h20v12H2z"/><path d="M8 20h8M12 16v4"/><path d="m10 8 4 2-4 2z"/>' },
     community: { label: "Cộng đồng Zalo",     icon: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>' },
     course:    { label: "Khoá học Zoom",      icon: '<path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>' },
-    elearning: { label: "E-learning + Ebook", icon: '<path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2z"/><path d="M22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/>' }
+    elearning: { label: "E-learning + Ebook", icon: '<path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2z"/><path d="M22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/>' },
+    record:    { label: "Video xem lại",      icon: '<rect x="2" y="4" width="20" height="16" rx="3"/><path d="m10 9 5 3-5 3z"/>' }
   };
   var ICON_CAL = '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>';
   var ICON_INF = '<path d="M7 9a3 3 0 1 0 0 6c3 0 7-6 10-6a3 3 0 1 1 0 6c-3 0-7-6-10-6z"/>';
@@ -97,7 +98,8 @@
     var want = cfg.items || ["*"];
     var list = (data.items || []).filter(function (it) {
       return (want.indexOf("*") >= 0 || want.indexOf(it.id) >= 0) && it.image && (it.url || PREVIEW);
-    }).map(function (it) { return { it: it, s: state(it, t) }; });
+    }).map(function (it) { return { it: it, s: state(it, t) }; })
+      .filter(function (x) { return !(x.it.hide_after_end && x.s.ended); });   // "hide_after_end": hết hạn là ẩn hẳn
     list.sort(function (a, b) { return rank(a.s, t) - rank(b.s, t); });
     return { cfg: cfg, list: list };
   }
