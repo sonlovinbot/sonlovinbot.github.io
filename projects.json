@@ -103,6 +103,20 @@
       "cta": "Xem skill →"
     },
     {
+      "id": "huong-dan-su-dung-muse-ai",
+      "title": "Hướng dẫn A-Z tạo Muse AI",
+      "desc": "11 bước đăng ký Muse AI (VPN) có ảnh và video, nhận 1 tỷ token; kèm lộ trình workshop 3 giờ, mindmap, case & prompt AI Voice.",
+      "category": "guide",
+      "url": "https://studio.danghuuson.com/huong-dan-su-dung-muse-ai/",
+      "image": "assets/projects/huong-dan-su-dung-muse-ai.jpg",
+      "tags": [
+        "Muse AI",
+        "Hướng dẫn",
+        "Mới"
+      ],
+      "cta": "Xem hướng dẫn ↗"
+    },
+    {
       "id": "free-app-sponsor-kit",
       "title": "Free App Kit",
       "desc": "Bộ skill Claude Code đưa phần mềm vibe code ra công chúng: kiểm bảo mật, bộ cài 1 lệnh, trang giới thiệu, tên miền riêng miễn phí, góc tài trợ, báo bản mới.",
