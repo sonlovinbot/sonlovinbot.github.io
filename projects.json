@@ -103,6 +103,20 @@
       "cta": "Xem skill →"
     },
     {
+      "id": "seo-blog-writer-skill",
+      "title": "SEO Blog Writer",
+      "desc": "Skill ChatGPT: từ 1 từ khoá ra bài blog SEO tiếng Việt 1.800–2.500 từ, 10 tiêu đề, dàn ý, FAQ, bộ ảnh minh hoạ và nháp WordPress.",
+      "category": "skill",
+      "url": "/seo-blog-writer-skill/",
+      "image": "assets/projects/seo-blog-writer-skill.jpg",
+      "tags": [
+        "Skill ChatGPT",
+        "SEO",
+        "Mới"
+      ],
+      "cta": "Xem skill →"
+    },
+    {
       "id": "huong-dan-su-dung-muse-ai",
       "title": "Hướng dẫn A-Z tạo Muse AI",
       "desc": "11 bước đăng ký Muse AI (VPN) có ảnh và video, nhận 1 tỷ token; kèm lộ trình workshop 3 giờ, mindmap, case & prompt AI Voice.",
