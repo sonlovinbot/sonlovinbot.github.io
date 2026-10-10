@@ -104,6 +104,20 @@
     return { cfg: cfg, list: list };
   }
 
+  // Phần thêm tuỳ chọn của 1 mục: nhãn loại riêng, nhãn ưu đãi, gạch đầu dòng ✓, dòng nổi bật, màu nút chuyển sắc
+  function kindLabel(it, k) { return it.kind_label || k.label; }
+  function badgeOf(it, s) { return !s.ended && it.badge ? it.badge : s.badge; }
+  function colors(it) {
+    return '" style="--a:' + esc(it.accent || "#C2410C") + (it.accent2 ? ";--a2:" + esc(it.accent2) : "") + '"';
+  }
+  function bullets(it, cls) {
+    if (!it.bullets || !it.bullets.length) return "";
+    return '<span class="' + cls + '">' + it.bullets.map(function (b) {
+      return '<span class="spk-li"><i aria-hidden="true">✓</i>' + esc(b) + "</span>";
+    }).join("") + "</span>";
+  }
+  function highlight(it, s) { return it.highlight && !s.ended ? '<span class="spk-hl">' + esc(it.highlight) + "</span>" : ""; }
+
   function track(id, kind, placement) {
     if (typeof window.fbq === "function") window.fbq("trackCustom", "SponsorClick", { content_ids: [id], content_type: kind, placement: placement });
   }
@@ -117,18 +131,20 @@
     var cta = s.ended ? (it.cta_ended || "Xem lại") : (it.cta || "Xem ngay");
     var tag = href ? "a" : "div";
     var attrs = href ? ' href="' + esc(href) + '" target="_blank" rel="noopener sponsored"' : ' aria-disabled="true"';
-    return "<" + tag + ' class="spk-card t-' + s.tier + (href ? "" : " no-link") + '"' + attrs +
-      ' data-spk="' + esc(it.id) + '" data-kind="' + esc(it.kind) + '" style="--a:' + esc(it.accent || "#C2410C") + '">' +
+    var showWhen = !(s.key === Infinity && it.bullets);   // mục không thời hạn có gạch đầu dòng thì bỏ dòng "Không giới hạn thời gian"
+    return "<" + tag + ' class="spk-card t-' + s.tier + (href ? "" : " no-link") + (it.accent2 ? " has-a2" : "") + (it.badge ? " has-promo" : "") + '"' + attrs +
+      ' data-spk="' + esc(it.id) + '" data-kind="' + esc(it.kind) + colors(it) + ">" +
       '<span class="spk-media" style="background:' + esc(it.bg || "var(--spk-soft)") + '">' +
         '<img src="' + esc(BASE + it.image) + '" alt="" decoding="async" class="fit-' + esc(it.fit || "cover") + '" style="object-position:' + esc(it.pos || "50% 50%") + '">' +
         (flag ? '<span class="spk-flag">' + flag + "</span>" : "") +
       "</span>" +
       '<span class="spk-body">' +
-        '<span class="spk-top"><span class="spk-kind">' + svg(k.icon) + esc(k.label) + "</span>" +
-          '<span class="spk-badge">' + esc(s.badge) + "</span></span>" +
+        '<span class="spk-top"><span class="spk-kind">' + svg(k.icon) + esc(kindLabel(it, k)) + "</span>" +
+          '<span class="spk-badge">' + esc(badgeOf(it, s)) + "</span></span>" +
         '<span class="spk-title">' + esc(it.title) + "</span>" +
-        '<span class="spk-desc">' + esc(it.desc) + "</span>" +
-        '<span class="spk-when" title="' + esc(s.whenFull) + '">' + svg(s.key === Infinity ? ICON_INF : ICON_CAL) + esc(s.when) + "</span>" +
+        (it.desc ? '<span class="spk-desc">' + esc(it.desc) + "</span>" : "") +
+        bullets(it, "spk-list") + highlight(it, s) +
+        (showWhen ? '<span class="spk-when" title="' + esc(s.whenFull) + '">' + svg(s.key === Infinity ? ICON_INF : ICON_CAL) + esc(s.when) + "</span>" : "") +
         '<span class="spk-foot">' + price +
           '<span class="spk-cta">' + (href ? esc(cta) + " →" : "Chưa có link") + "</span></span>" +
       "</span></" + tag + ">";
@@ -240,16 +256,17 @@
     var it = x.it, s = x.s, k = KINDS[it.kind] || KINDS.course;
     var href = link(it, source, "game_popup", "popup");
     return '<p class="spk-gask">' + esc(it.pitch || "Muốn tự làm game 3D như thế này?") + "</p>" +
-      '<a class="spk-gsp t-' + s.tier + '" href="' + esc(href) + '" target="_blank" rel="noopener sponsored" data-spk="' + esc(it.id) +
-        '" data-kind="' + esc(it.kind) + '" style="--a:' + esc(it.accent || "#C2410C") + '">' +
+      '<a class="spk-gsp t-' + s.tier + (it.badge ? " has-promo" : "") + '" href="' + esc(href) + '" target="_blank" rel="noopener sponsored" data-spk="' + esc(it.id) +
+        '" data-kind="' + esc(it.kind) + colors(it) + ">" +
         '<span class="spk-gsp-img" style="background:' + esc(it.bg || "#eee") + '"><img src="' + esc(BASE + it.image) + '" alt="" class="fit-' +
           esc(it.fit || "cover") + '" style="object-position:' + esc(it.pos || "50% 50%") + '"></span>' +
-        '<span class="spk-gsp-tx"><span class="spk-kind">' + svg(k.icon) + esc(k.label) + "</span>" +
+        '<span class="spk-gsp-tx"><span class="spk-kind">' + svg(k.icon) + esc(kindLabel(it, k)) + "</span>" +
           "<b>" + esc(it.title) + "</b>" +
-          '<span class="spk-badge">' + esc(s.live ? "Đang diễn ra" : s.key === Infinity ? s.badge : s.when) + "</span></span>" +
-      "</a>" +
-      '<a class="spk-gcta" href="' + esc(href) + '" target="_blank" rel="noopener sponsored" data-spk="' + esc(it.id) + '" data-kind="' + esc(it.kind) +
-        '" style="--a:' + esc(it.accent || "#C2410C") + '">' + esc(it.cta_popup || it.cta || "Xem ngay") + " →</a>" +
+          '<span class="spk-badge">' + esc(it.badge && !s.ended ? it.badge : s.live ? "Đang diễn ra" : s.key === Infinity ? s.badge : s.when) + "</span></span>" +
+        (it.bullets ? bullets(it, "spk-list spk-glist") : "") +
+      "</a>" + highlight(it, s) +
+      '<a class="spk-gcta' + (it.accent2 ? " has-a2" : "") + '" href="' + esc(href) + '" target="_blank" rel="noopener sponsored" data-spk="' + esc(it.id) + '" data-kind="' + esc(it.kind) +
+        colors(it) + ">" + esc(it.cta_popup || it.cta || "Xem ngay") + " →</a>" +
       '<p class="spk-gad">Ad · Sponsor — Coachio Academy</p>';
   }
 

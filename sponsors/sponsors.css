@@ -67,6 +67,19 @@ a.spk-card:hover .spk-media img { transform: scale(1.03); }
   background: var(--a); color: #fff; font-size: 14px; font-weight: 700; white-space: nowrap; }
 .no-link .spk-cta { background: transparent; color: var(--spk-muted); border: 1px dashed var(--spk-line); }
 
+/* Mục có ưu đãi: nhãn ưu đãi, gạch đầu dòng ✓, dòng nổi bật, nút chuyển sắc (accent → accent2) */
+.has-promo .spk-badge { background: linear-gradient(90deg, var(--a), var(--a2, var(--a))); color: #fff; }
+.spk-list { display: flex; flex-direction: column; gap: 5px; font-size: 14px; line-height: 1.4; }
+.spk-li { display: flex; gap: 8px; align-items: flex-start; }
+.spk-li i { flex: none; display: inline-grid; place-items: center; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%;
+  font-style: normal; font-size: 11px; font-weight: 900; color: #fff; background: var(--a2, var(--a)); }
+.spk-hl { display: block; font-size: 13px; font-weight: 700; padding: 7px 10px; border-radius: 10px;
+  color: var(--a); background: color-mix(in srgb, var(--a) 10%, transparent); border: 1px dashed color-mix(in srgb, var(--a) 45%, transparent); }
+@media (prefers-color-scheme: dark) { .spk:not([data-theme="light"]) .spk-hl { color: #FFC2A3; } }
+.spk[data-theme="dark"] .spk-hl { color: #FFD8C2; }
+.has-a2 .spk-cta, .spk-gcta.has-a2 { background: linear-gradient(90deg, var(--a), var(--a2)); }
+.has-a2 .spk-cta { min-height: 42px; padding: 0 18px; font-size: 15px; box-shadow: 0 6px 16px color-mix(in srgb, var(--a2) 35%, transparent); }
+
 /* Đã kết thúc: mờ, xuống cuối, vẫn bấm được */
 .spk-card.t-ended { opacity: .72; }
 .t-ended .spk-media img { filter: grayscale(.85); }
@@ -158,6 +171,8 @@ a.spk-card.t-ended:hover { opacity: 1; }
 .spk-gcta { display: flex; align-items: center; justify-content: center; min-height: 46px; margin-top: 10px; border-radius: 14px;
   background: var(--a); color: #fff; font-weight: 800; font-size: 15px; text-decoration: none; box-shadow: 0 6px 16px rgba(0, 0, 0, .15); }
 .spk-gcta:hover { filter: brightness(1.08); }
+.spk-glist { grid-column: 1 / -1; gap: 3px; font-size: 13px; color: #3B3552; padding: 2px 4px 0; }
+.spk-gsp + .spk-hl { margin-top: 8px; font-size: 12.5px; text-align: left; }
 .spk-gad { margin: 6px 0 0; font-size: 11px; color: #9A93AE; }
 .spk-gfoot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px dashed #E6DFF2; }
 .spk-gfoot a { font-size: 13px; font-weight: 700; color: #6D28D9; text-decoration: none; }

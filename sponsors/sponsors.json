@@ -6,10 +6,8 @@
       "source": "app_hub",
       "title": "Chương trình đang mở",
       "items": [
-        "ai-bootcamp-2026",
-        "workshop-vibe-code-3d",
-        "antigravity-ebook",
-        "muse-ai-workshop"
+        "elearning-game-3d",
+        "antigravity-ebook"
       ]
     },
     "vieneu": {
@@ -17,22 +15,22 @@
       "title": "Học thêm cùng Coachio",
       "layout": "wide",
       "items": [
-        "workshop-vibe-code-3d",
-        "muse-ai-workshop"
+        "elearning-game-3d",
+        "antigravity-ebook"
       ]
     },
     "games": {
       "source": "games_page",
       "title": "Tự tay làm game 3D",
-      "lead": "Các game ở đây đều làm bằng AI. Workshop chỉ bạn cách giao việc cho ChatGPT/Claude để dựng thế giới 3D của riêng mình.",
+      "lead": "Các game ở đây đều làm bằng AI. Khoá e-learning chỉ bạn từng bước cùng AI: từ nhân vật 3D đến game chơi được trên điện thoại.",
       "layout": "wide",
       "items": [
-        "workshop-vibe-code-3d"
+        "elearning-game-3d"
       ]
     },
     "game": {
       "items": [
-        "workshop-vibe-code-3d",
+        "elearning-game-3d",
         "antigravity-ebook"
       ]
     },
@@ -44,9 +42,42 @@
       "items": [
         "muse-workshop-record"
       ]
+    },
+    "model3d": {
+      "source": "model_3d_page",
+      "title": "Tự tay làm game 3D",
+      "lead": "Chiếc xe này dựng bằng AI, từ ảnh đến mô hình chạy được trên web. Khoá e-learning chỉ bạn làm từng bước, từ nhân vật 3D đến game chơi trên điện thoại.",
+      "layout": "wide",
+      "items": [
+        "elearning-game-3d"
+      ]
     }
   },
   "items": [
+    {
+      "id": "elearning-game-3d",
+      "kind": "elearning",
+      "kind_label": "Khoá e-learning",
+      "badge": "🎁 Ưu đãi",
+      "title": "Kỹ năng và cách làm Game 3D cho người mới",
+      "bullets": [
+        "Học online, làm theo từng bước cùng AI",
+        "Từ nhân vật 3D đến game chơi được trên điện thoại",
+        "Không cần biết lập trình"
+      ],
+      "highlight": "🎁 Ưu đãi dành riêng cho học viên workshop",
+      "cta": "Nhận ưu đãi",
+      "cta_popup": "Nhận ưu đãi",
+      "url": "https://academy.coachio.ai/funnels/khoa-elearning-ky-nang-lam-game-3d-cho-nguoi-moi",
+      "campaign": "elearning-game-3d",
+      "image": "img/workshop-3d.webp",
+      "fit": "contain",
+      "bg": "linear-gradient(160deg,#1b1240,#2d1b69 55%,#0f3b3a)",
+      "accent": "#F0743A",
+      "accent2": "#E9497A",
+      "short": "Khoá Game 3D",
+      "pitch": "Muốn tự làm game 3D như thế này?"
+    },
     {
       "id": "workshop-vibe-code-3d",
       "kind": "workshop",
