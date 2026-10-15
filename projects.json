@@ -15,7 +15,7 @@
     {
       "id": "vieneu-audio-studio",
       "title": "AI Audio Studio",
-      "desc": "Giọng nói AI tiếng Việt chạy ngay trên máy tính: sinh giọng tự nhiên, clone giọng từ 3–5 giây, hội thoại nhiều nhân vật, xuất API. Miễn phí, chạy offline.",
+      "desc": "Giọng nói AI chạy ngay trên máy tính: 25 giọng Việt, clone giọng, hội thoại nhiều nhân vật, đọc thêm 17 thứ tiếng (Anh, Hàn, Nhật…), MCP cho Claude / ChatGPT Codex. Miễn phí, chạy offline.",
       "category": "app",
       "url": "/vieneu-audio-studio/",
       "download": "/vieneu-audio-studio/#tai-ve",
@@ -24,7 +24,8 @@
         "macOS",
         "Windows",
         "Linux",
-        "25 giọng"
+        "17 ngôn ngữ",
+        "MCP"
       ],
       "featured": true
     },
